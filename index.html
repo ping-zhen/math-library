@@ -9,227 +9,254 @@
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 body{
-    font-family:"Microsoft JhengHei",sans-serif;
-    background:#f7f5ef;
-    color:#2f4f74;
+font-family:"Microsoft JhengHei",sans-serif;
+background:#f5f6f8;
+color:#2f4f74;
 }
 
 /* 導覽列 */
 
 nav{
-    position:fixed;
-    top:0;
-    width:100%;
-    background:white;
-    box-shadow:0 2px 10px rgba(0,0,0,.08);
-    z-index:999;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:rgba(255,255,255,.95);
+backdrop-filter:blur(10px);
+box-shadow:0 2px 15px rgba(0,0,0,.08);
+z-index:999;
 }
 
 .nav-container{
-    max-width:1400px;
-    margin:auto;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 40px;
+max-width:1400px;
+margin:auto;
+padding:15px 30px;
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
 .logo{
-    font-size:24px;
-    font-weight:bold;
+font-size:28px;
+font-weight:bold;
+color:#244f87;
 }
 
 .menu{
-    display:flex;
-    gap:30px;
+display:flex;
+gap:30px;
 }
 
 .menu a{
-    text-decoration:none;
-    color:#345b8c;
-    font-weight:600;
+text-decoration:none;
+color:#345b8c;
+font-weight:600;
 }
 
-/* Hero */
+/* 首頁主視覺 */
 
 .hero{
-    margin-top:70px;
-    min-height:900px;
+margin-top:75px;
+min-height:100vh;
 
-    background:
-    linear-gradient(rgba(255,255,255,.2),
-    rgba(255,255,255,.2)),
-    url('hero-bg.png');
+background:
+linear-gradient(
+rgba(255,255,255,.15),
+rgba(255,255,255,.15)
+),
+url('hero-bg.png');
 
-    background-size:cover;
-    background-position:center;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+background-size:cover;
+background-position:center center;
+background-repeat:no-repeat;
+
+display:flex;
+align-items:center;
+justify-content:center;
+padding:50px 20px;
 }
 
 .hero-content{
-    text-align:center;
-    max-width:900px;
+text-align:center;
+max-width:1000px;
+background:rgba(255,255,255,.75);
+padding:50px;
+border-radius:30px;
+backdrop-filter:blur(5px);
 }
 
 .hero h1{
-    font-size:68px;
-    color:#244f87;
-    margin-bottom:20px;
+font-size:68px;
+color:#214f88;
+margin-bottom:20px;
 }
 
 .hero h2{
-    font-size:30px;
-    font-weight:normal;
-    margin-bottom:40px;
+font-size:30px;
+font-weight:normal;
+margin-bottom:35px;
 }
 
+/* 搜尋框 */
+
 .search-box{
-    display:flex;
-    justify-content:center;
-    margin-bottom:25px;
+display:flex;
+justify-content:center;
+margin-bottom:25px;
 }
 
 .search-box input{
-    width:600px;
-    padding:18px;
-    border:none;
-    border-radius:50px 0 0 50px;
-    font-size:18px;
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
+width:600px;
+padding:18px;
+border:none;
+font-size:18px;
+border-radius:50px 0 0 50px;
 }
 
 .search-box button{
-    padding:18px 40px;
-    border:none;
-    background:#ff7f95;
-    color:white;
-    font-size:18px;
-    border-radius:0 50px 50px 0;
-    cursor:pointer;
+border:none;
+padding:18px 40px;
+background:#ff7f95;
+color:white;
+font-size:18px;
+border-radius:0 50px 50px 0;
+cursor:pointer;
 }
 
 .tags{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:10px;
+display:flex;
+justify-content:center;
+gap:10px;
+flex-wrap:wrap;
 }
 
 .tags span{
-    background:white;
-    padding:10px 18px;
-    border-radius:30px;
-    box-shadow:0 3px 8px rgba(0,0,0,.08);
+background:white;
+padding:10px 18px;
+border-radius:30px;
+box-shadow:0 3px 8px rgba(0,0,0,.08);
 }
 
 /* 區塊 */
 
 .section{
-    max-width:1400px;
-    margin:auto;
-    padding:80px 30px;
+max-width:1400px;
+margin:auto;
+padding:80px 25px;
 }
 
 .section-title{
-    font-size:38px;
-    margin-bottom:40px;
-    color:#24518f;
+font-size:38px;
+margin-bottom:40px;
+color:#24518f;
 }
 
 .cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
 }
 
 .card{
-    background:white;
-    border-radius:25px;
-    padding:30px;
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
-    transition:.3s;
+background:white;
+border-radius:25px;
+padding:35px;
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+transition:.3s;
 }
 
 .card:hover{
-    transform:translateY(-10px);
+transform:translateY(-8px);
 }
 
 .card h3{
-    margin-bottom:15px;
-    color:#24518f;
+margin-bottom:15px;
+color:#24518f;
 }
 
-.card button{
-    margin-top:20px;
-    border:none;
-    padding:12px 25px;
-    border-radius:30px;
-    background:#ff8da0;
-    color:white;
-    cursor:pointer;
+.card p{
+line-height:1.8;
 }
 
-/* 下方功能 */
+.card a{
+display:inline-block;
+margin-top:20px;
+padding:12px 25px;
+border-radius:30px;
+background:#ff8da0;
+color:white;
+text-decoration:none;
+}
+
+/* 下方三區 */
 
 .features{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
 }
 
 .feature{
-    background:white;
-    border-radius:25px;
-    padding:40px;
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
+background:white;
+padding:40px;
+border-radius:25px;
+box-shadow:0 8px 25px rgba(0,0,0,.08);
 }
 
 .feature h3{
-    margin-bottom:15px;
+margin-bottom:15px;
+color:#24518f;
 }
 
 footer{
-    text-align:center;
-    padding:40px;
-    background:white;
-    margin-top:50px;
+background:white;
+padding:40px;
+text-align:center;
+margin-top:50px;
 }
+
+/* 手機版 */
 
 @media(max-width:768px){
 
 .hero h1{
-    font-size:40px;
+font-size:42px;
 }
 
 .hero h2{
-    font-size:22px;
+font-size:22px;
+}
+
+.hero-content{
+padding:30px;
 }
 
 .search-box{
-    flex-direction:column;
-    align-items:center;
+flex-direction:column;
 }
 
 .search-box input{
-    width:90%;
-    border-radius:50px;
-    margin-bottom:10px;
+width:100%;
+border-radius:50px;
+margin-bottom:10px;
 }
 
 .search-box button{
-    border-radius:50px;
+border-radius:50px;
 }
 
 .features{
-    grid-template-columns:1fr;
+grid-template-columns:1fr;
+}
+
+.menu{
+display:none;
 }
 
 }
@@ -250,8 +277,8 @@ footer{
 <a href="#">首頁</a>
 <a href="#">電子書</a>
 <a href="#">電子期刊</a>
-<a href="#">推薦閱讀</a>
-<a href="#">計畫成果</a>
+<a href="#">精選推薦</a>
+<a href="#">關於計畫</a>
 </div>
 
 </div>
@@ -269,7 +296,8 @@ footer{
 
 <div class="search-box">
 
-<input type="text"
+<input
+type="text"
 placeholder="搜尋電子書、電子期刊、主題關鍵字">
 
 <button>搜尋</button>
@@ -277,13 +305,11 @@ placeholder="搜尋電子書、電子期刊、主題關鍵字">
 </div>
 
 <div class="tags">
-
 <span>Game Theory</span>
 <span>Linear Algebra</span>
 <span>Topology</span>
 <span>Artificial Intelligence</span>
 <span>數學史</span>
-
 </div>
 
 </div>
@@ -292,28 +318,26 @@ placeholder="搜尋電子書、電子期刊、主題關鍵字">
 
 <section class="section">
 
-<h2 class="section-title">
-📖 電子書資源
-</h2>
+<h2 class="section-title">📖 電子書資源</h2>
 
 <div class="cards">
 
 <div class="card">
 <h3>Cambridge 電子書</h3>
 <p>數學與統計電子書資源</p>
-<button>立即探索</button>
+<a href="#">立即探索</a>
 </div>
 
 <div class="card">
 <h3>EMS Press</h3>
 <p>數學專業出版資源</p>
-<button>立即探索</button>
+<a href="#">立即探索</a>
 </div>
 
 <div class="card">
 <h3>Math EBA</h3>
 <p>本年度新增電子書</p>
-<button>立即探索</button>
+<a href="#">立即探索</a>
 </div>
 
 </div>
@@ -322,28 +346,26 @@ placeholder="搜尋電子書、電子期刊、主題關鍵字">
 
 <section class="section">
 
-<h2 class="section-title">
-📚 電子期刊資源
-</h2>
+<h2 class="section-title">📚 電子期刊資源</h2>
 
 <div class="cards">
 
 <div class="card">
 <h3>AMS Journals</h3>
 <p>數學領域重要期刊</p>
-<button>查看期刊</button>
+<a href="#">查看期刊</a>
 </div>
 
 <div class="card">
 <h3>Springer Mathematics</h3>
 <p>國際數學研究資源</p>
-<button>查看期刊</button>
+<a href="#">查看期刊</a>
 </div>
 
 <div class="card">
 <h3>SIAM Journals</h3>
 <p>應用數學與計算科學</p>
-<button>查看期刊</button>
+<a href="#">查看期刊</a>
 </div>
 
 </div>
