@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>國立清華大學數學圖書館</title>
+
+<style>
+.resource-area{
+
+max-width:1400px;
+margin:70px auto;
+
+padding:0 40px;
+
+}
+
+.resource-area h2{
+
+font-size:36px;
+
+margin-bottom:25px;
+
+color:#24518f;
+
+}
+
+.resource-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(280px,1fr));
+
+gap:25px;
+
+}
+
+<div class="resource-card">
+
+    <img src="springer-logo.png" class="publisher-logo">
+
+    <h3>Springer Mathematics</h3>
+
+    <p>
+        2026年度採購數學期刊
+    </p>
+
+    <a href="springer.html" class="resource-btn">
+        立即探索 →
+    </a>
+
+    <img src="rabbit-reading.png" class="rabbit">
+
+</div>
+
+background:white;
+
+border-radius:30px;
+
+padding:35px;
+
+box-shadow:
+0 8px 25px rgba(0,0,0,.08);
+
+transition:.3s;
+
+}
+
+.resource-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.resource-card h3{
+
+font-size:28px;
+
+margin-bottom:15px;
+
+color:#24518f;
+
+}
+
+.resource-card p{
+
+font-size:18px;
+
+margin-bottom:25px;
+
+color:#666;
+
+}
+
+.resource-card a{
+
+display:inline-block;
+
+padding:12px 30px;
+
+border-radius:50px;
+
+background:#ff8da0;
+
+color:white;
+
+text-decoration:none;
+
+font-weight:bold;
+
+}
+
+.journal a{
+
+background:#4d9cff;
+
+}
+
+國立清華大學數學圖書館<br>
+NTHU Mathematics Library
+
+</footer>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:"Microsoft JhengHei",sans-serif;
+background:#f5f6f8;
+color:#2f4f74;
+}
+
+/* 導覽列 */
+
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:rgba(255,255,255,.95);
+backdrop-filter:blur(10px);
+box-shadow:0 2px 15px rgba(0,0,0,.08);
+z-index:999;
+}
+
+.nav-container{
+max-width:1400px;
+margin:auto;
+padding:15px 30px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+color:#244f87;
+}
+
+.menu{
+display:flex;
+gap:30px;
+}
+
+.menu a{
+text-decoration:none;
+color:#345b8c;
+font-weight:600;
+}
+
+/* 首頁主視覺 */
+
+.hero{
+
+height:900px;
+
+background:
+url('hero-bg.png.png');
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+position:relative;
+  
+}
+  .hero-overlay{
+
+text-align:center;
+
+background:
+rgba(255,255,255,.55);
+
+padding:50px;
+
+border-radius:30px;
+
+backdrop-filter:blur(6px);
+
+max-width:900px;
+
+}
+
+.banner{
+
+display:inline-block;
+
+background:#f5dfbf;
+
+padding:18px 60px;
+
+font-size:60px;
+
+font-weight:bold;
+
+color:#244f87;
+
+border-radius:20px;
+
+margin-bottom:25px;
+
+box-shadow:
+0 5px 20px rgba(0,0,0,.15);
+
+}
+
+.hero h2{
+
+font-size:32px;
+
+margin-bottom:15px;
+
+}
+
+.slogan{
+
+font-size:22px;
+
+color:#5f7ea6;
+
+margin-bottom:35px;
+
+}
+margin-top:75px;
+min-height:100vh;
+
+background:
+linear-gradient(
+rgba(255,255,255,.15),
+rgba(255,255,255,.15)
+),
+url('hero-bg.png.png');
+
+background-size:cover;
+background-position:center center;
+background-repeat:no-repeat;
+
+display:flex;
+align-items:center;
+justify-content:center;
+padding:50px 20px;
+}
+
+.hero-content{
+text-align:center;
+max-width:1000px;
+background:rgba(255,255,255,.75);
+padding:50px;
+border-radius:30px;
+backdrop-filter:blur(5px);
+}
+
+.hero h1{
+font-size:68px;
+color:#214f88;
+margin-bottom:20px;
+}
+
+.hero h2{
+font-size:30px;
+font-weight:normal;
+margin-bottom:35px;
+}
+
+/* 搜尋框 */
+
+.search-box{
+display:flex;
+justify-content:center;
+margin-bottom:25px;
+}
+
+.search-box input{
+width:600px;
+padding:18px;
+border:none;
+font-size:18px;
+border-radius:50px 0 0 50px;
+}
+
+.search-box button{
+border:none;
+padding:18px 40px;
+background:#ff7f95;
+color:white;
+font-size:18px;
+border-radius:0 50px 50px 0;
+cursor:pointer;
+}
+
+.tags{
+display:flex;
+justify-content:center;
+gap:10px;
+flex-wrap:wrap;
+}
+
+.tags span{
+background:white;
+padding:10px 18px;
+border-radius:30px;
+box-shadow:0 3px 8px rgba(0,0,0,.08);
+}
+
+/* 區塊 */
+
+.section{
+max-width:1400px;
+margin:auto;
+padding:80px 25px;
+}
+
+.section-title{
+font-size:38px;
+margin-bottom:40px;
+color:#24518f;
+}
+
+.resource-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.resource-card{
+    background:white;
+    border-radius:35px;
+    padding:35px;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.publisher-logo{
+    height:80px;
+    margin-bottom:20px;
+}
+
+.resource-btn{
+    display:inline-block;
+
+    background:#ff8da1;
+    color:white;
+
+    padding:15px 35px;
+    border-radius:50px;
+
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.rabbit{
+    position:absolute;
+
+    bottom:0;
+    left:0;
+
+    width:120px;
+}
+}
+
+.resource-card:hover{
+transform:translateY(-8px);
+}
+
+.card h3{
+margin-bottom:15px;
+color:#24518f;
+}
+
+.card p{
+line-height:1.8;
+}
+
+.card a{
+display:inline-block;
+margin-top:20px;
+padding:12px 25px;
+border-radius:30px;
+background:#ff8da0;
+color:white;
+text-decoration:none;
+}
+
+/* 下方三區 */
+
+.features{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
+
+.feature{
+background:white;
+padding:40px;
+border-radius:25px;
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.feature h3{
+margin-bottom:15px;
+color:#24518f;
+}
+
+footer{
+background:white;
+padding:40px;
+text-align:center;
+margin-top:50px;
+}
+
+/* 手機版 */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:42px;
+}
+
+.hero h2{
+font-size:22px;
+}
+
+.hero-content{
+padding:30px;
+}
+
+.search-box{
+flex-direction:column;
+}
+
+.search-box input{
+width:100%;
+border-radius:50px;
+margin-bottom:10px;
+}
+
+.search-box button{
+border-radius:50px;
+}
+
+.features{
+grid-template-columns:1fr;
+}
+
+.menu{
+display:none;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="nav-container">
+
+<div class="logo">
+📚 NTHU Mathematics Library
+</div>
+
+<div class="menu">
+<a href="#">首頁</a>
+<a href="#">電子書</a>
+<a href="#">電子期刊</a>
+<a href="#">精選推薦</a>
+<a href="#">關於計畫</a>
+</div>
+
+</div>
+</nav>
+
+<section class="hero">
+
+<div class="hero-overlay">
+
+<div class="banner">
+
+嵐朵帶你探索數學世界
+
+</div>
+
+<h2>
+數學圖書館圖書計畫電子資源專區
+</h2>
+
+<p class="slogan">
+閱讀 × 連結 × 思考 × 創造更明亮的未來
+</p>
+
+<div class="search-box">
+
+<input
+type="text"
+placeholder="搜尋電子書、電子期刊、主題或關鍵字">
+
+<button>
+搜尋
+</button>
+
+</div>
+
+<div class="tags">
+
+<span>Game Theory</span>
+<span>Linear Algebra</span>
+<span>Topology</span>
+<span>Artificial Intelligence</span>
+<span>數學史</span>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="resource-area">
+
+<h2>
+📚 電子書資源
+</h2>
+
+<div class="resource-grid">
+
+<div class="resource-card">
+
+<h3>Cambridge 電子書</h3>
+
+<p>
+3,028 冊數學與統計電子書
+</p>
+
+<a href="#">
+立即探索 →
+</a>
+
+</div>
+
+<div class="resource-card">
+
+<h3>EMS Press</h3>
+
+<p>
+數學專業電子書資源
+</p>
+
+<a href="#">
+立即探索 →
+</a>
+
+</div>
+
+<div class="resource-card">
+
+<h3>Math EBA</h3>
+
+<p>
+本年度新增電子書
+</p>
+
+<a href="#">
+立即探索 →
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="resource-area">
+
+<h2>
+📖 電子期刊資源
+</h2>
+
+<div class="resource-grid">
+
+<div class="resource-card journal">
+
+<h3>AMS Journals</h3>
+
+<p>
+數學領域重要期刊
+</p>
+
+<a href="#">
+查看期刊 →
+</a>
+
+</div>
+
+<div class="resource-card journal">
+
+<h3>Springer Mathematics</h3>
+
+<p>
+國際數學研究資源
+</p>
+
+<a href="springer.html">
+    查看期刊 →
+</a>
+
+</div>
+
+<div class="resource-card journal">
+
+<h3>SIAM Journals</h3>
+
+<p>
+應用數學與計算科學
+</p>
+
+<a href="#">
+查看期刊 →
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="features">
+
+<div class="feature">
+<h3>⭐ 嵐朵推薦閱讀</h3>
+<p>從經典到新知，帶你發現數學好書。</p>
+</div>
+
+<div class="feature">
+<h3>💡 主題探索</h3>
+<p>依主題探索更多有趣的數學資源。</p>
+</div>
+
+<div class="feature">
+<h3>📊 圖書計畫成果</h3>
+<p>了解本年度圖書計畫成果與研究支援。</p>
+</div>
+
+</div>
+
+
+
+</body>
+</html>
