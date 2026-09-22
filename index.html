@@ -401,56 +401,108 @@ placeholder="搜尋電子書、電子期刊、主題或關鍵字">
 
 </section>
 
-<section class="section">
+<section class="resource-area">
 
-<h2 class="section-title">📖 電子書資源</h2>
+<h2>
+📚 電子書資源
+</h2>
 
-<div class="cards">
+<div class="resource-grid">
 
-<div class="card">
+<div class="resource-card">
+
 <h3>Cambridge 電子書</h3>
-<p>數學與統計電子書資源</p>
-<a href="#">立即探索</a>
+
+<p>
+3,028 冊數學與統計電子書
+</p>
+
+<a href="#">
+立即探索 →
+</a>
+
 </div>
 
-<div class="card">
+<div class="resource-card">
+
 <h3>EMS Press</h3>
-<p>數學專業出版資源</p>
-<a href="#">立即探索</a>
+
+<p>
+數學專業電子書資源
+</p>
+
+<a href="#">
+立即探索 →
+</a>
+
 </div>
 
-<div class="card">
+<div class="resource-card">
+
 <h3>Math EBA</h3>
-<p>本年度新增電子書</p>
-<a href="#">立即探索</a>
+
+<p>
+本年度新增電子書
+</p>
+
+<a href="#">
+立即探索 →
+</a>
+
 </div>
 
 </div>
 
 </section>
 
-<section class="section">
+<section class="resource-area">
 
-<h2 class="section-title">📚 電子期刊資源</h2>
+<h2>
+📖 電子期刊資源
+</h2>
 
-<div class="cards">
+<div class="resource-grid">
 
-<div class="card">
+<div class="resource-card journal">
+
 <h3>AMS Journals</h3>
-<p>數學領域重要期刊</p>
-<a href="#">查看期刊</a>
+
+<p>
+數學領域重要期刊
+</p>
+
+<a href="#">
+查看期刊 →
+</a>
+
 </div>
 
-<div class="card">
+<div class="resource-card journal">
+
 <h3>Springer Mathematics</h3>
-<p>國際數學研究資源</p>
-<a href="#">查看期刊</a>
+
+<p>
+國際數學研究資源
+</p>
+
+<a href="#">
+查看期刊 →
+</a>
+
 </div>
 
-<div class="card">
+<div class="resource-card journal">
+
 <h3>SIAM Journals</h3>
-<p>應用數學與計算科學</p>
-<a href="#">查看期刊</a>
+
+<p>
+應用數學與計算科學
+</p>
+
+<a href="#">
+查看期刊 →
+</a>
+
 </div>
 
 </div>
@@ -478,9 +530,100 @@ placeholder="搜尋電子書、電子期刊、主題或關鍵字">
 
 </div>
 
-</section>
+.resource-area{
 
-<footer>
+max-width:1400px;
+margin:70px auto;
+
+padding:0 40px;
+
+}
+
+.resource-area h2{
+
+font-size:36px;
+
+margin-bottom:25px;
+
+color:#24518f;
+
+}
+
+.resource-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(280px,1fr));
+
+gap:25px;
+
+}
+
+.resource-card{
+
+background:white;
+
+border-radius:30px;
+
+padding:35px;
+
+box-shadow:
+0 8px 25px rgba(0,0,0,.08);
+
+transition:.3s;
+
+}
+
+.resource-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.resource-card h3{
+
+font-size:28px;
+
+margin-bottom:15px;
+
+color:#24518f;
+
+}
+
+.resource-card p{
+
+font-size:18px;
+
+margin-bottom:25px;
+
+color:#666;
+
+}
+
+.resource-card a{
+
+display:inline-block;
+
+padding:12px 30px;
+
+border-radius:50px;
+
+background:#ff8da0;
+
+color:white;
+
+text-decoration:none;
+
+font-weight:bold;
+
+}
+
+.journal a{
+
+background:#4d9cff;
+
+}
 
 國立清華大學數學圖書館<br>
 NTHU Mathematics Library
